@@ -1,0 +1,61 @@
+1.To run all the Class give : 
+
+@Test
+public void cp() throws InterruptedException, IOException, AWTException  {
+
+2.To run Indivisual class give :
+//@Test
+	public static void main string[] throws InterruptedException, IOException, AWTException  {
+	
+3.To run report indivual :
+	
+	public class Create_Property extends Common_Report { 
+	static WebDriver driver = new FirefoxDriver();
+
+	@Test
+	public void cp() throws InterruptedException, IOException, AWTException  {
+		File file = new File("/home/bimal/workspace/Property_Tax/Data_Create");
+		FileInputStream fileInput = null;
+		fileInput = new FileInputStream(file);
+		Properties prop = new Properties();
+		
+4.To run Publicly :
+		
+Give Same also but run from Create_mainwork_1.
+
+5. Take the screen_shot of acknowledge form :
+
+/* Capture Screen_Shot */
+	    
+	    File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+   	 	File text =getLatestFilefromDir("//home/bimal//");
+ 6. To capture server down screen shot :
+ 
+ 		 else {
+			 System.out.println("Server Unavailable");
+			 File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			 File text =getLatestFilefromDir("//home/bimal//");
+			 String text2 = text.getName();
+			 }
+		}
+			 
+	private static File getLatestFilefromDir(String dirPath) {
+		
+		File dir = new File(dirPath);
+	    File[] files = dir.listFiles();
+	    if (files == null || files.length == 0) {
+		return null;
+	    }
+
+	    File lastModifiedFile = files[0];
+	    for (int i = 1; i < files.length; i++) {
+	       if (lastModifiedFile.lastModified() < files[i].lastModified()) {
+	           lastModifiedFile = files[i];
+	       	}
+	    }
+	    return lastModifiedFile;
+	    
+	}
+	
+}
+	    
