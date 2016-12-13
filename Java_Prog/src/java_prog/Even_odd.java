@@ -4,7 +4,7 @@ public class Even_odd {
 
 	public static void main(String[] args) {
 		
-		int a = 11;
+		int a = 17;
 		int b = a%2;
 		
 		if (b==0){
